@@ -1,4 +1,4 @@
--- Insert departments
+-- DEPARTMENT NAMES
 INSERT INTO department
     (id, name)
 VALUES
@@ -7,7 +7,7 @@ VALUES
     (3, 'Tech'),
     (4, 'Legal');
 
--- Insert roles
+-- ROLE IDS
 INSERT INTO role
     (id, title, salary, department_id)
 VALUES
@@ -21,7 +21,7 @@ VALUES
 
 
 
--- Insert employees
+-- EMPLOYEE NAMES
 INSERT INTO employee
     (id, first_name, last_name, role_id, manager_id)
 VALUES
