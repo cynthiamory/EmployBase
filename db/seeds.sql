@@ -22,7 +22,7 @@ VALUES
 
 
 -- EMPLOYEE NAMES
-INSERT INTO employee
+INSERT INTO employees
     (id, first_name, last_name, role_id, manager_id)
 VALUES
     (1, 'Jenna', 'Monti', 1, NULL),
@@ -32,15 +32,15 @@ VALUES
     (5, 'John', 'Doe', 5, 4),
     (6, 'Jane', 'Smith', 6, 4);
     
-   SELECT
-  employee.id,
-  employee.first_name,
-  employee.last_name,
-  role.title,
-  department.name AS department,
-  role.salary,
-  CONCAT(manager.first_name, ' ', manager.last_name) AS manager
-FROM employees_db.employee
-INNER JOIN employees_db.role ON employee.role_id = role.id
-INNER JOIN employees_db.department ON role.department_id = department.id
-LEFT JOIN employees_db.employee AS manager ON employee.manager_id = manager.id;
+--    SELECT
+--   employees.id,
+--   employees.first_name,
+--   employees.last_name,
+--   role.title,
+--   department.name AS department,
+--   role.salary,
+--   CONCAT(manager.first_name, ' ', manager.last_name) AS manager
+-- FROM employees_db.employees
+-- INNER JOIN employees_db.role ON employee.role_id = role.id
+-- INNER JOIN employees_db.department ON role.department_id = department.id
+-- LEFT JOIN employees_db.employees AS manager ON employees.manager_id = manager.id;
