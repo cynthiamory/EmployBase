@@ -66,7 +66,7 @@ THEN I am prompted to select an employee to update and their new role and this i
 ![Website Preview Image](./assets/employbase-preview-1.png)
 
 ## Link To Walkthru Video
-**Walkthrough Video:** [Link To Deployed site on Heroku!](https://...) 
+**Walkthrough Video:** [Link To Walkthru Video](https://...) 
 
 
 ## Installation and Usage
