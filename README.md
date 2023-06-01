@@ -70,7 +70,7 @@ THEN I am prompted to select an employee to update and their new role and this i
 
 
 ## Installation and Usage
-- To clone the repo: https://github.com/cynthiamory/note-express.git
+- To clone the repo: https://github.com/cynthiamory/EmployBase.git
 - Install [Node](https://nodejs.org/en). version 16 and up. Command line: npm init 
 - Install Inquirer: [Version 8.2.4](https://www.npmjs.com/package/inquirer/v/8.2.4) npm i inquirer@8.2.4
 - Then install MySQL2: [Version 3.1.2](https://www.npmjs.com/package/mysql2) Command line: npm i mysql2
