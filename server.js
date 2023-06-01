@@ -282,7 +282,7 @@ function addEmployee() {
 
 //FUNCTION TO UPDATE THE ROLE OF AN EMPLOYEE
 function updateEmployeeRole() {
-    
+
   //GET THE LIST OF EMPLOYEES FROM DATABASE
   connection.query("SELECT * FROM employee", (err, employees) => {
     if (err) throw err;
