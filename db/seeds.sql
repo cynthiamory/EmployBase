@@ -8,7 +8,7 @@ VALUES
     (4, 'Legal');
 
 -- ROLE IDS
-INSERT INTO role
+INSERT INTO roles
     (id, title, salary, department_id)
 VALUES
     (1, 'Sales Manager', 120000, 1),

@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
   host: "localhost",
   port: 3306,
   user: "root",
-  password: "",
+  password: "pass321",
   database: "employee_db",
 });
 
@@ -103,7 +103,7 @@ function viewAllDepartments() {
 //FUNCTION TO VIEW ALL THE ROLES IN DATABASE
 function viewAllRoles() {
   connection.query(
-    "SELECT role.id, role.title, role.salary, department.name AS department FROM role INNER JOIN department ON role.department_id = department.id",
+    "SELECT roles.id, roles.title, roles.salary, department.name AS department FROM roles INNER JOIN department ON roles.department_id = department.id",
     (err, res) => {
 
       //IF STATEMENT IF THERE ARE ANY ERRORS  
