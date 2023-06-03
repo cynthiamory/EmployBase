@@ -288,7 +288,7 @@ function updateEmployeeRole() {
     if (err) throw err;
 
     //GET THE LIST OF ROLES FROM DATABASE
-    connection.query("SELECT * FROM role", (err, roles) => {
+    connection.query("SELECT * FROM roles", (err, roles) => {
       if (err) throw err;
 
       inquirer
@@ -320,7 +320,7 @@ function updateEmployeeRole() {
 
           connection.query(
             "UPDATE employees SET role_id = ? WHERE id = ?",
-            [selectedRole.id, selectedEmployees.id],
+            [selectedRole.id, selectedEmployee.id],
             (err) => {
               if (err) throw err;
               console.log("Employee role has been updated!");
