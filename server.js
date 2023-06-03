@@ -248,7 +248,7 @@ function addEmployee() {
         ])
         .then((answers) => {
           const selectedRole = roles.find(
-            (roles) => roles.title === answers.roles
+            (roles) => roles.title === answers.role
           );
 
           let managerId = null;
@@ -266,7 +266,7 @@ function addEmployee() {
             {
               first_name: answers.firstName,
               last_name: answers.lastName,
-              roles_id: selectedRole.id,
+              role_id: selectedRole.id,
               manager_id: managerId,
             },
             (err) => {
