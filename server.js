@@ -262,11 +262,11 @@ function addEmployee() {
           }
 
           connection.query(
-            "INSERT INTO employee SET ?",
+            "INSERT INTO employees SET ?",
             {
               first_name: answers.firstName,
               last_name: answers.lastName,
-              role_id: selectedRole.id,
+              roles_id: selectedRole.id,
               manager_id: managerId,
             },
             (err) => {
@@ -284,7 +284,7 @@ function addEmployee() {
 function updateEmployeeRole() {
 
   //GET THE LIST OF EMPLOYEES FROM DATABASE
-  connection.query("SELECT * FROM employee", (err, employees) => {
+  connection.query("SELECT * FROM employees", (err, employees) => {
     if (err) throw err;
 
     //GET THE LIST OF ROLES FROM DATABASE
@@ -298,7 +298,7 @@ function updateEmployeeRole() {
             type: "list",
             message: "Select the employee to update:",
             choices: employees.map(
-              (employee) => `${employee.first_name} ${employee.last_name}`
+              (employees) => `${employees.first_name} ${employees.last_name}`
             ),
           },
           {
@@ -310,17 +310,17 @@ function updateEmployeeRole() {
         ])
         .then((answers) => {
           const selectedEmployee = employees.find(
-            (employee) =>
-              `${employee.first_name} ${employee.last_name}` ===
-              answers.employee
+            (employees) =>
+              `${employees.first_name} ${employees.last_name}` ===
+              answers.employees
           );
           const selectedRole = roles.find(
             (role) => role.title === answers.role
           );
 
           connection.query(
-            "UPDATE employee SET role_id = ? WHERE id = ?",
-            [selectedRole.id, selectedEmployee.id],
+            "UPDATE employees SET role_id = ? WHERE id = ?",
+            [selectedRole.id, selectedEmployees.id],
             (err) => {
               if (err) throw err;
               console.log("Employee role has been updated!");
