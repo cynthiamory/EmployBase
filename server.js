@@ -209,11 +209,11 @@ function addRole() {
 function addEmployee() {
 
   // GET THE LIST OF ROLES FROM DATABASE
-  connection.query("SELECT * FROM role", (err, roles) => {
+  connection.query("SELECT * FROM roles", (err, roles) => {
     if (err) throw err;
 
     // GET THE LIST OF EMPLOYEES FROM DATABASE
-    connection.query("SELECT * FROM employee", (err, employees) => {
+    connection.query("SELECT * FROM employees", (err, employees) => {
       if (err) throw err;
 
       inquirer
@@ -241,21 +241,21 @@ function addEmployee() {
             choices: [
               "None",
               ...employees.map(
-                (employee) => `${employee.first_name} ${employee.last_name}`
+                (employees) => `${employees.first_name} ${employees.last_name}`
               ),
             ],
           },
         ])
         .then((answers) => {
           const selectedRole = roles.find(
-            (role) => role.title === answers.role
+            (roles) => roles.title === answers.roles
           );
 
           let managerId = null;
           if (answers.manager !== "None") {
             const selectedManager = employees.find(
-              (employee) =>
-                `${employee.first_name} ${employee.last_name}` ===
+              (employees) =>
+                `${employees.first_name} ${employees.last_name}` ===
                 answers.manager
             );
             managerId = selectedManager.id;
