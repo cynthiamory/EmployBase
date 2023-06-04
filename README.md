@@ -64,9 +64,11 @@ THEN I am prompted to select an employee to update and their new role and this i
 ![Website Preview Image](./assets/demo-01.png)
 - ## Preview 2 - Terminal
 ![Website Preview Image](./assets/employbase-preview-1.png)
+- ## Preview 3 - Terminal
+![Website Preview Image](./assets/employbase-preview-2.png)
 
 ## Link To Walkthru Video
-**Walkthrough Video:** [Link To Walkthru Video](https://...) 
+**Walkthrough Video:** [Link To Walkthru Video](https://youtu.be/sP7m29WxV7M) 
 
 
 ## Installation and Usage
@@ -78,7 +80,6 @@ THEN I am prompted to select an employee to update and their new role and this i
 - Cfonts: [Cfonts 3.1.1](https://www.npmjs.com/package/cfonts) Command line: npm i cfonts
 - Run the application using Command: node server.js or npm start
 
-This application does not require any installation by the user. It can be used by simply following the live heroku link and then one can start creeating a new note using the "+" button. Once a new note has been given a title and description, it can be saved using the save icon and it will then be added to a list on the left hand side where it can be clicked on to be viewed again.
 
 ## Tests
 - There are no tests yet for this application
@@ -89,18 +90,21 @@ Assignment was built with:
 - Inquirer
 - mySQL
 - mySQL Workbench
+- Cfonts
+- Console.Table
 - Node.js
 - VS Code
 - Github
 
 
 ## Credits
-- Note Express: Cynthia Morales - Full Stack Developer Student
+- EmployBase: Cynthia Morales - Full Stack Developer Student
 - Institution: The University Of Toronto
 - Course: Bootcamp Full Stack Development
 - Instructor: Ali Masqood
 - Tutor: Katie Redford 
-- Learing Assistant Ask BCS Support: Erik (dluna5629) & Keegan (kwedwick)
+- Learing Assistant Ask BCS Support: Erik (dluna5629), Keegan (kwedwick), Alex (abradshaw), Diego (dmarrs)
+- Online Support: W3Schools, Medium, SQL Shack, mySQL, Stack Overflow
 - License badges: Sheilds.io
 
 
