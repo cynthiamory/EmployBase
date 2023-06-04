@@ -68,7 +68,7 @@ THEN I am prompted to select an employee to update and their new role and this i
 ![Website Preview Image](./assets/employbase-preview-2.png)
 
 ## Link To Walkthru Video
-**Walkthrough Video:** [Link To Walkthru Video](https://youtu.be/sP7m29WxV7M) 
+**Walkthrough Video:** [Link To Walkthru Video](https://www.youtube.com/watch?v=sP7m29WxV7M) 
 
 
 ## Installation and Usage
