@@ -294,7 +294,7 @@ function updateEmployeeRole() {
       inquirer
         .prompt([
           {
-            name: "employee",
+            name: "employees",
             type: "list",
             message: "Select the employee to update:",
             choices: employees.map(
@@ -309,7 +309,7 @@ function updateEmployeeRole() {
           },
         ])
         .then((answers) => {
-          const selectedEmployee = employees.find(
+          const selectedEmployees = employees.find(
             (employees) =>
               `${employees.first_name} ${employees.last_name}` ===
               answers.employees
@@ -319,8 +319,8 @@ function updateEmployeeRole() {
           );
 
           connection.query(
-            "UPDATE employee SET role_id = ? WHERE id = ?",
-            [selectedRole.id, selectedEmployee.id],
+            "UPDATE employees SET role_id = ? WHERE id = ?",
+            [selectedRole.id, selectedEmployees.id],
             (err) => {
               if (err) throw err;
               console.log("Employee role has been updated!");
