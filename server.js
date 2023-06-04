@@ -189,7 +189,7 @@ function addRole() {
         );
 
         connection.query(
-          "INSERT INTO role SET ?",
+          "INSERT INTO roles SET ?",
           {
             title: answers.title,
             salary: answers.salary,
@@ -319,7 +319,7 @@ function updateEmployeeRole() {
           );
 
           connection.query(
-            "UPDATE employees SET role_id = ? WHERE id = ?",
+            "UPDATE employee SET role_id = ? WHERE id = ?",
             [selectedRole.id, selectedEmployee.id],
             (err) => {
               if (err) throw err;
